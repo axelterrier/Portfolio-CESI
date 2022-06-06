@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Axel</title>
+</head>
+<body>
+
+<div id="header">
+    <div id="headerContainer">
+        <div id="logoContainer">
+            <img src="/logo.png" id="logo">
+            <h3 id="nomHeader">Prenom</h3>
+        </div>
+
+        <div id="navigation">
+            <ul class="navButton">
+                <li><a onclick="scrollToHome();">Home</a></li>
+            </ul>
+            <ul class="navButton">
+                <li><a onclick="scrollToAbout();">About</a></li>
+            </ul>
+            <ul class="navButton">
+                <li><a onclick="scrollToPortfolio();">Portfolio</a></li>
+            </ul>
+            <ul class="navButton">
+                <li><a onclick="scrollToResume();">Resume</a></li>
+            </ul>
+
+        </div>
+
+        <div id="contact">
+
+            <a href="#" class="navButton">
+                <button id="navButton">
+                    Contact me
+                </button>
+            </a>
+        </div>
+    </div>
+    
+</div>
+
+<div id="home">
+    <div id="left">
+        <div id="round"></div>
+        <div id="presentationText">
+            <h1 id="text">
+                Hi I'm Axel Terrier
+            </h1>
+        </div>
+        <div id="smallText">
+            <h4 id="text">
+                Je suis un étudiant en alternance au CESI école d'ingénieur au sein de l'entreprise XXX
+            </h4>
+        </div>
+        <div id="cta">
+            <a href="#" id="ctaLink">
+                <button id="ctaButton">Hire me</button>
+            </a>
+        </div>
+        <div id="socials">
+            <div id="socialsContainer">
+                <a href="#" class="socialLink">
+                    <img src="/github.png" alt="" class="socialImage">
+                </a>
+                <a href="#" class="socialLink">
+                    <img src="/linkedin.png" alt="" class="socialImage">
+                </a>
+                <a href="#" class="socialLink">
+                    <img src="/email.png" alt="" class="socialImage">
+                </a>
+            </div>
+                      
+        </div>
+        <div id="arrow">
+            <img onclick="scrollToAbout();" src="/down-arrow.png" alt="" id="arrowCta" class="box bounce-3">
+        </div>
+    </div>
+    <div id="right">
+        <img src="/profil.png" id="profile">
+        <div id="halfCircle">&nbsp;</div>
+        <div id="floatingCard">
+            <div id="littleCircle">&nbsp;</div>
+            <p id="jobDescription">Apprenti Chef de projet</p>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+
+</div>
+
+<div id="portfolio">
+
+</div>
+
+<div id="resume">
+
+</div>
+
+
+</body>
+</html>
