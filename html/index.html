@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="/js/script.js"></script>
+    <script src="/js/dropdown.js"></script>
+    <script src="/js/lang.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+
+    <script>
+        var arrLang = {
+            'en' : {
+                'home' : 'Home',
+                'about' : 'About',
+                'portfolio' : 'Portfolio',
+                'resume' : 'Resume',
+                'contactMe' : 'Contact me',
+                'language' : 'Language'
+            },
+            'fr' : {
+                'home' : 'Accueil',
+                'about': 'A propos',
+                'portfolio': 'Portfolio',
+                'resume': 'CV',
+                'contactMe': 'Me contacter',
+                'language': 'Langue'
+            }
+        };
+
+        $(function(){
+            $('.translate').click(function(){
+                var lang = $(this).attr('id');
+
+                $('.lang').each(function(index, element){
+                    $(this).text(arrLang[lang][$(this).attr('key')]);
+                });
+            });
+        });
+    </script>
+ 
+    <title>Axel</title>
+</head>
+<body>
+
+<div id="header">
+    <div id="headerContainer">
+        <div id="logoContainer">
+            <img src="/assets/logo.png" id="logo">
+            <h3 id="nomHeader">Prenom</h3>
+        </div>
+
+        <div id="navigation">
+            <ul class="navButton">
+                <li><a onclick="scrollToHome();" class="lang" key="home">Home</a></li>
+            </ul>
+            <ul class="navButton">
+                <li><a onclick="scrollToAbout();" class="lang" key="about">About</a></li>
+            </ul>
+            <ul class="navButton">
+                <li><a onclick="scrollToPortfolio();" class="lang" key="portfolio">Portfolio</a></li>
+            </ul>
+            <ul class="navButton">
+                <li><a onclick="scrollToResume();" class="lang" key="resume">Resume</a></li>
+            </ul>
+
+        </div>
+
+        <div id="contact">
+
+            <a href="#" class="navButton">
+                <button id="navButton" class="lang" key="contactMe">
+                    Contact me
+                </button>
+            </a>
+        </div>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn lang" key="language">Language</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#" id="en" class="translate">English</a>
+                <a href="#" id="fr" class="translate">Français</a>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+
+<div id="home">
+    <div id="left">
+        <div id="round"></div>
+        <div id="presentationText">
+            <h1 id="text">
+                Hi I'm Axel Terrier
+            </h1>
+        </div>
+        <div id="smallText">
+            <h4 id="text">
+                Je suis un étudiant en alternance au CESI école d'ingénieur au sein de l'entreprise XXX
+            </h4>
+        </div>
+        <div id="cta">
+            <a href="#" id="ctaLink">
+                <button id="ctaButton">Hire me</button>
+            </a>
+        </div>
+        <div id="socials">
+            <div id="socialsContainer">
+                <a href="#" class="socialLink">
+                    <img src="/assets/github.png" alt="" class="socialImage">
+                </a>
+                <a href="#" class="socialLink">
+                    <img src="/assets/linkedin.png" alt="" class="socialImage">
+                </a>
+                <a href="#" class="socialLink">
+                    <img src="/assets/email.png" alt="" class="socialImage">
+                </a>
+            </div>
+                      
+        </div>
+        <div id="arrow">
+            <img onclick="scrollToAbout();" src="/assets/down-arrow.png" alt="" id="arrowCta" class="box bounce-3">
+        </div>
+    </div>
+    <div id="right">
+        <img src="/assets/profil.png" id="profile">
+        <div id="halfCircle">&nbsp;</div>
+        <div id="floatingCard">
+            <div id="littleCircle">&nbsp;</div>
+            <p id="jobDescription">Apprenti Chef de projet</p>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+
+</div>
+
+<div id="portfolio">
+
+</div>
+
+<div id="resume">
+
+</div>
+
+</body>
+<script>var dataReload = document.querySelectorAll("[data-reload");
+
+    var language = {
+        en: {
+            homeNav: "Home"
+        },
+        fr: {
+            homeNav: "Accueil"
+        }
+    };
+
+    if (window.location.hash) {
+        if (window.location.hash === "#fr") {
+            homeNav.textContent = language.fr.homeNav
+        }
+    }
+
+
+    for (i = 0; i <= dataReload.length - 1; i++) {
+        dataReload[i].onclick = function () {
+            location.reload(true)
+        };
+    }</script>
+</html>
